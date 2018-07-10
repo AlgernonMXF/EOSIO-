@@ -1,4 +1,4 @@
-#EOS本地环境搭建
+# EOS本地环境搭建
 
 >写在前面:
 >由于EOS技术尚在发展中，EOSIO代码更新较快，参考本文安装时可能会出现问题，推荐读者同时参考EOS.IO官方给出的开发文档https://developers.eos.io/eosio-nodeos/docs/overview-1 
