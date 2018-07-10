@@ -2,6 +2,7 @@
 
 >写在前面:
 >由于EOS技术尚在发展中，EOSIO代码更新较快，参考本文安装时可能会出现问题，推荐读者同时参考EOS.IO官方给出的开发文档https://developers.eos.io/eosio-nodeos/docs/overview-1 
+
 >注：该官方教程中依旧可能存在与代码不符合的地方，具体问题可参考下载的EOS源代码目录自行解决
 
 ## 软件安装
