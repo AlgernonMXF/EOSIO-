@@ -121,7 +121,7 @@ open .
 ```
 
 修改`config.ini`，添加/修改如下设置
-```c++
+```Linux
 # Enable production on a stale chain, since a single-node test chain is pretty much always stale
 enable-stale-production = true
 # Enable block production with the testnet producers
