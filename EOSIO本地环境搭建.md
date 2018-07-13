@@ -24,7 +24,7 @@
 	执行以下命令，安装编译环境
 
 	```
-  brew install git cmake autoconf automake libtool boost openssl llvm@4 gmp pkg-config
+  brew install git cmake autoconf automake libtool boost openssl llvm\@4 gmp pkg-config
 	```
 	
   手动安装secp256k1-zkp
