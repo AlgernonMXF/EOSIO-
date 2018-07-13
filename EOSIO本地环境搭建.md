@@ -73,10 +73,10 @@ cd eos/build/
 
 配置环境变量
 export WASM_LLVM_CONFIG=~/wasm-compiler/llvm/bin/llvm-config
-export LLVM_DIR=/usr/local/Cellar/llvm/4.0.1/lib/cmake/llvm
+export LLVM_DIR=/usr/local/Cellar/llvm\@4/4.0.1/lib/cmake/llvm
 
 设置WASM_ROOT以及Openssl变量
-cmake -DWASM_ROOT=~/opt/wasm-compiler/llvm -DOPENSSL_ROOT_DIR=/usr/local/Cellar/openssl/1.0.2l -DOPENSSL_LIBRARIES=/usr/local/Cellar/openssl/1.0.2l/lib ..
+cmake -DWASM_ROOT=~/wasm-compiler/llvm -DOPENSSL_ROOT_DIR=/usr/local/Cellar/openssl/1.0.2l -DOPENSSL_LIBRARIES=/usr/local/Cellar/openssl/1.0.2l/lib ..
 ```
 
 ## 配置完成，检查目录
