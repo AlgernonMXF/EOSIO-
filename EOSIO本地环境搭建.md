@@ -77,6 +77,7 @@ export LLVM_DIR=/usr/local/Cellar/llvm\@4/4.0.1/lib/cmake/llvm
 
 设置WASM_ROOT以及Openssl变量
 cmake -DWASM_ROOT=~/wasm-compiler/llvm -DOPENSSL_ROOT_DIR=/usr/local/Cellar/openssl/1.0.2o_2 -DOPENSSL_LIBRARIES=/usr/local/Cellar/openssl/1.0.2o_2/lib ..
+make -j4
 ```
 
 ## 配置完成，检查目录
