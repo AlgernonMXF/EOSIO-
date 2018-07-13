@@ -66,7 +66,7 @@ git submodule update --init --recursive
 
 ## 使用WASM编译器完整编译EOS源代码
 <!-- more -->
-注：新版mac移除了设置Openssl环境变量，需手动设置OPENSSL_ROOT_DIR和OPENSSL_LIBRARIES，读者在设置时应注意自己电脑上openssl的子目录是否为`1.0.21`
+注：新版mac移除了设置Openssl环境变量，需手动设置OPENSSL_ROOT_DIR和OPENSSL_LIBRARIES，读者在设置时应注意自己电脑上openssl的子目录是否为`1.0.2o`
 ```
 mkdir eos/build/
 cd eos/build/
@@ -76,7 +76,7 @@ export WASM_LLVM_CONFIG=~/wasm-compiler/llvm/bin/llvm-config
 export LLVM_DIR=/usr/local/Cellar/llvm\@4/4.0.1/lib/cmake/llvm
 
 设置WASM_ROOT以及Openssl变量
-cmake -DWASM_ROOT=~/wasm-compiler/llvm -DOPENSSL_ROOT_DIR=/usr/local/Cellar/openssl/1.0.2l -DOPENSSL_LIBRARIES=/usr/local/Cellar/openssl/1.0.2l/lib ..
+cmake -DWASM_ROOT=~/wasm-compiler/llvm -DOPENSSL_ROOT_DIR=/usr/local/Cellar/openssl/1.0.2o_2 -DOPENSSL_LIBRARIES=/usr/local/Cellar/openssl/1.0.2o_2/lib ..
 ```
 
 ## 配置完成，检查目录
