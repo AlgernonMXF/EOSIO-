@@ -46,4 +46,26 @@ CMake Error at plugins/mongo_db_plugin/CMakeLists.txt:22 (find_package):
 -- Configuring incomplete, errors occurred!
 ```
 意思是说我没有安装`libbsoncxx-static`?
+到文件`plugins/mongo_db_plugin/CMakeLists.txt`中查看发现，哎原来这里面写了要怎么安装mongodb，      
+不过是Ubuntu版的，sad，MacOS系统要怎么拯救呢              
+文件中具体描述如下：     
+```
+sudo apt-get install pkg-config libssl-dev libsasl2-dev
+wget https://github.com/mongodb/mongo-c-driver/releases/download/1.8.0/mongo-c-driver-1.8.0.tar.gz
+tar xzf mongo-c-driver-1.8.0.tar.gz
+cd mongo-c-driver-1.8.0
+./configure --disable-automatic-init-and-cleanup --enable-static
+make
+sudo make install
+
+git clone https://github.com/mongodb/mongo-cxx-driver.git --branch releases/stable --depth 1
+cd mongo-cxx-driver/build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_SHARED_LIBS=OFF ..
+sudo make EP_mnmlstc_core
+make
+sudo make install
+sudo apt-get install mongodb
+```
+
+
 
