@@ -46,8 +46,7 @@ CMake Error at plugins/mongo_db_plugin/CMakeLists.txt:22 (find_package):
 -- Configuring incomplete, errors occurred!
 ```
 意思是说我没有安装`libbsoncxx-static`?
-到文件`plugins/mongo_db_plugin/CMakeLists.txt`中查看发现，哎原来这里面写了要怎么安装mongodb，      
-不过是Ubuntu版的，sad，MacOS系统要怎么拯救呢              
+到文件`plugins/mongo_db_plugin/CMakeLists.txt`中查看发现，哎原来这里面写了要怎么安装mongodb，不过是Ubuntu版的，sad，MacOS系统要怎么拯救呢              
 文件中具体描述如下：     
 ```
 sudo apt-get install pkg-config libssl-dev libsasl2-dev
@@ -67,5 +66,41 @@ sudo make install
 sudo apt-get install mongodb
 ```
 
+对比一下我自己在MacOS系统下安装mongodb的步骤如下：
+
+参考官方文档：https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/installation/#installing-the-mongocxx-driver      
+* 安装MongoDB C Driver
+```
+//下载最新版tarball
+$ curl -LO https://github.com/mongodb/mongo-c-driver/releases/download/1.12.0/mongo-c-driver-1.12.0.tar.gz
+$ tar xzf mongo-c-driver-1.12.0.tar.gz
+$ cd mongo-c-driver-1.12.0
+
+//编译并安装
+$ mkdir cmake-build
+$ cd cmake-build
+$ cmake -DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF ..
+```
+  
+* 下载mongocxx driver
+```
+git clone https://github.com/mongodb/mongo-cxx-driver.git \
+    --branch releases/stable --depth 1
+cd mongo-cxx-driver/build
+
+//配置cmake
+cmake -DCMAKE_BUILD_TYPE=Release -DBSONCXX_POLY_USE_MNMLSTC=1 \
+-DCMAKE_INSTALL_PREFIX=/usr/local ..
+
+//编译安装MNMLSTC的核心组件
+sudo make EP_mnmlstc_core
+
+//编译安装
+make && sudo make install
+```
+
+
+对比之后发现，编译安装MongoDB C Driver时没有执行
+`./configure --disable-automatic-init-and-cleanup --enable-static`
 
 
