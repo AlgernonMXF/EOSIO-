@@ -104,3 +104,10 @@ make && sudo make install
 `./configure --disable-automatic-init-and-cleanup --enable-static`
 
 
+## 然后我发现官网有官方教程！！
+网址：https://developers.eos.io/eosio-nodeos/v1.0.0/docs/clean-install-macos-sierra-1012-and-higher                       
+其中也有提到如何安装MongoDB C++ driver              
+但是我在执行`make`时却出错了，错误如下：
+
+
+
