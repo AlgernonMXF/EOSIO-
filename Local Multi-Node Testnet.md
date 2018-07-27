@@ -90,7 +90,9 @@ cleos --wallet-url http://localhost:8899 wallet import 5Jgd8MptkNhK1zNTnvafi2Ekf
 ```
 
 * 使用密钥创建账户
-`cleos --wallet-url http://localhost:8899 create account eosio inita EOS7fUFfx28CqGoC2i3EJLdvW8n4nhSL4qmW2qHuvLhkKA3yFdeQ7 EOS6VWVdRd7cCeyiajDV6Jx8UAXYbgzXez6Msh3bHVgoLYhi7Nfdz`           
+```
+cleos --wallet-url http://localhost:8899 create account eosio inita EOS7fUFfx28CqGoC2i3EJLdvW8n4nhSL4qmW2qHuvLhkKA3yFdeQ7 EOS6VWVdRd7cCeyiajDV6Jx8UAXYbgzXez6Msh3bHVgoLYhi7Nfdz
+```
 创建成功会显示如下信息：
 ```
 executed transaction: dc44fa169c1309dc4f9748f1e01c07d452447ef32d866b1b5fcbd34d32721501  200 bytes  1317 us
