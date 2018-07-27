@@ -108,6 +108,30 @@ make && sudo make install
 网址：https://developers.eos.io/eosio-nodeos/v1.0.0/docs/clean-install-macos-sierra-1012-and-higher                       
 其中也有提到如何安装MongoDB C++ driver              
 但是我在执行`make`时却出错了，错误如下：
+```
+./src/mongoc/mongoc-index.h:78:41: error: expected function body after function
+      declarator
+mongoc_index_opt_geo_get_default (void) BSON_GNUC_CONST;
+                                        ^
+./src/mongoc/mongoc-index.h:80:40: error: expected function body after function
+      declarator
+mongoc_index_opt_wt_get_default (void) BSON_GNUC_CONST;
+                                       ^
+In file included from src/mongoc/mongoc-async.c:21:
+In file included from ./src/mongoc/mongoc-async-cmd-private.h:26:
+In file included from ./src/mongoc/mongoc-client.h:36:
+./src/mongoc/mongoc-ssl.h:47:35: error: expected function body after function
+      declarator
+mongoc_ssl_opt_get_default (void) BSON_GNUC_CONST;
 
-
+4 errors generated.
+make[1]: *** [src/mongoc/libmongoc_la-mongoc-apm.lo] Error 1
+make[1]: *** Waiting for unfinished jobs....
+4 errors generated.
+make[1]: *** [src/mongoc/libmongoc_la-mongoc-async.lo] Error 1
+4 errors generated.
+make[1]: *** [src/mongoc/libmongoc_la-mongoc-async-cmd.lo] Error 1
+make: *** [all-recursive] Error 1
+```
+看一下错误内容，好像是读取代码时出错···，初步猜测是编译器的问题。
 
