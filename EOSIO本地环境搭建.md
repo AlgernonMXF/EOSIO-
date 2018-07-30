@@ -27,7 +27,7 @@
   brew install git cmake autoconf automake libtool boost openssl llvm\@4 gmp pkg-config
 	```
 	
-  手动安装secp256k1-zkp
+  手动安装椭圆曲线加密库secp256k1-zkp
   
 	```
   git clone https://github.com/cryptonomex/secp256k1-zkp.git
@@ -39,6 +39,8 @@
 	```
 
 ## 配置WASM环境
+使用WebAssembly，可以在浏览器中运行一些高新更能的编程语言，可用它将大型的C/C++代码库，如游戏，物理引擎，桌面程序等导入Web平台。 
+
 ```
 mkdir  ~/wasm-compiler
 cd ~/wasm-compiler
