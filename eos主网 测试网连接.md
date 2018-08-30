@@ -24,7 +24,7 @@ github：https://github.com/eosforce/eosforce
 
 以下步骤参考官方文档https://eosforce.github.io/Documentation/#/zh-cn/eosforce_bp
 
-####1.  下载源码
+#### 1.  下载源码
 ```C++
 apt-get update && apt-get install -y git wget
 
@@ -32,7 +32,7 @@ apt-get update && apt-get install -y git wget
 git clone https://github.com/eosforce/eosforce.git eosforce
 ```
 
-####2. 安装EOS Force
+#### 2. 安装EOS Force
 ```C++
 cd eosforce && git submodule update --init --recursive 
 ./eosio_build.sh
@@ -52,14 +52,14 @@ cp build/contracts/eosio.msig/eosio.msig.abi build/contracts/eosio.msig/eosio.ms
 cd build && make install
 ```
 
-####3. 获取config.ini文件
+#### 3. 获取config.ini文件
 ```C++
 //获取config.ini并拷贝至config
 wget http://download.aitimeout.site/config.ini
 cp config.ini ~/.local/share/eosio/nodeos/config/
 ```
 
-####4. 修改config.ini
+#### 4. 修改config.ini
 * p2p-server-address
 `p2p-server-addree = 0.0.0.0:9876`
 
