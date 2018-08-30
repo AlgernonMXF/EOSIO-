@@ -18,7 +18,7 @@ github：https://github.com/eosforce/eosforce
 
 文件路径：
 源代码：`/wyf/eosforce`
-区块信息：`/opt/eosforce`
+区块信息：`/opt/eosdata/eosforce`
 配置文件：`~/.local/share/eosio/nodeos/config`
 
 
@@ -76,6 +76,6 @@ cd build/programs/nodeos
 ```
 可同时打开另一个终端查看链信息和区块高度，对比EOS Force信息；EOS Force信息参考https://w1.eosforce.cn/v1/chain/get_info
 ```C++
-cleso get info
+cleso get info --data-dir /opt/eosdata/eosforce
 ```
 
